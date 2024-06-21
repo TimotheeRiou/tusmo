@@ -1,16 +1,40 @@
-import React from 'react';
+import React from "react";
 
-function SaisieMot({ motActuel, setMotActuel, gererDeviner, disabled }) {
+function SaisieMot({
+    motActuel,
+    setMotActuel,
+    gererDeviner,
+    disabled,
+    motALongueur,
+}) {
+    const handleChange = (e) => {
+        if (e.target.value.length <= motALongueur) {
+            setMotActuel(e.target.value.toUpperCase());
+        }
+    };
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter" && !disabled && motActuel.length === motALongueur) {
+            gererDeviner();
+        }
+    };
+
     return (
         <div>
             <input
                 type="text"
                 value={motActuel}
-                onChange={(e) => setMotActuel(e.target.value.toUpperCase())}
-                maxLength={5}
+                onChange={handleChange}
+                onKeyPress={handleKeyPress}
                 disabled={disabled}
+                maxLength={motALongueur} // Definir la limite de longueur dynamique
             />
-            <button onClick={gererDeviner} disabled={disabled}>OK</button>
+            <button
+                onClick={gererDeviner}
+                disabled={disabled || motActuel.length !== motALongueur}
+            >
+                OK
+            </button>
         </div>
     );
 }

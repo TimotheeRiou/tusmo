@@ -1,53 +1,141 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  min-width: 300px;
+  box-sizing: border-box;
 }
 
 input {
   text-transform: uppercase;
-  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button {
-  margin-left: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6200ea;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #3700b3;
 }
 
 .guess {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 span {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-  margin: 0 2px;
-  border: 1px solid #000;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  border: 1px solid #444;
 }
 
 .correct {
-  background-color: green;
+  background-color: #388e3c;
   color: white;
 }
 
 .present {
-  background-color: yellow;
+  background-color: #fbc02d;
   color: black;
 }
 
 .absent {
-  background-color: grey;
+  background-color: #616161;
   color: white;
 }
 
 .message {
   margin-top: 20px;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  color: #bb86fc;
 }
 
 .essais-restants {
   margin-top: 10px;
-  font-size: 1em;
+  font-size: 1.2em;
+}
+
+.mot-longueur {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #03dac6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1em;
+  }
+
+  input {
+    margin-top: 10px;
+    font-size: 0.9em;
+  }
+
+  .message,
+  .essais-restants,
+  .mot-longueur {
+    font-size: 1em;
+  }
 }
