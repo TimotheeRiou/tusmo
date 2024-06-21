@@ -26,19 +26,19 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 1. Clonez le dépôt sur votre machine locale :
 
-    ```bash
+    ```
     git clone https://github.com/TimotheeRiou/tusmo.git
     ```
 
 2. Accédez au répertoire du projet :
 
-    ```bash
+    ```
     cd tusmo
     ```
 
 3. Installez les dépendances nécessaires :
 
-    ```bash
+    ```
     npm install
     ```
 
@@ -46,7 +46,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 Pour démarrer le serveur de développement, exécutez :
 
-    ```bash
+    ```
     npm start
     ```
 
@@ -58,19 +58,19 @@ Pour lancer les tests avec Cypress, suivez les étapes suivantes :
 
 1. Assurez-vous que le serveur de développement est en cours d'exécution :
 
-    ```bash
+    ```
     npm start
     ```
 
 2. Ouvrez une nouvelle fenêtre de terminal et accédez au répertoire du projet :
 
-    ```bash
+    ```
     cd tusmo
     ```
 
 3. Lancez Cypress en mode interactif :
 
-    ```bash
+    ```
     npx cypress open
     ```
 
@@ -78,7 +78,7 @@ Pour lancer les tests avec Cypress, suivez les étapes suivantes :
 
 4. Pour lancer les tests en mode headless (sans interface graphique), exécutez :
 
-    ```bash
+    ```
     npx cypress run
     ```
 
