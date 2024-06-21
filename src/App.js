@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import WordInput from './WordInput';
+import WordDisplay from './WordDisplay';
 import './App.css';
 
+const MOT_A_DEVINER = 'REACT';  // Le mot à deviner
+
 function App() {
+  const [mot, setMot] = useState([]);
+  const [motActuel, setMotActuel] = useState('');
+
+  const handleGuess = () => {
+    if (motActuel.length === MOT_A_DEVINER.length) {
+      setMot([...mot, motActuel]);
+      setMotActuel('');
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Motus</h1>
+      <WordInput
+        motActuel={motActuel}
+        setMotActuel={setMotActuel}
+        handleGuess={handleGuess}
+      />
+      <WordDisplay mot={mot} mot_a_deviner={MOT_A_DEVINER} />
     </div>
   );
 }
