@@ -9,7 +9,7 @@ function WordInput({ motActuel, setMotActuel, handleGuess }) {
                 onChange={(e) => setMotActuel(e.target.value.toUpperCase())}
                 maxLength={5}  // Limiter l'entrée à la longueur du mot à deviner
             />
-            <button onClick={handleGuess}>Guess</button>
+            <button onClick={handleGuess}>OK</button>
         </div>
     );
 }
