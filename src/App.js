@@ -1,17 +1,18 @@
+// src/App.js
 import React, { useState } from 'react';
-import WordInput from './WordInput';
-import WordDisplay from './WordDisplay';
+import SaisieMot from './SaisieMot';
+import AffichageMot from './AffichageMot';
 import './App.css';
 
-const MOT_A_DEVINER = 'REACT';  // Le mot à deviner
+const MOT_A_DEVINER = 'REACT';
 
 function App() {
-  const [mot, setMot] = useState([]);
+  const [mots, setMots] = useState([]);
   const [motActuel, setMotActuel] = useState('');
 
-  const handleGuess = () => {
+  const gererDeviner = () => {
     if (motActuel.length === MOT_A_DEVINER.length) {
-      setMot([...mot, motActuel]);
+      setMots([...mots, motActuel]);
       setMotActuel('');
     }
   };
@@ -19,12 +20,12 @@ function App() {
   return (
     <div className="App">
       <h1>Motus</h1>
-      <WordInput
+      <SaisieMot
         motActuel={motActuel}
         setMotActuel={setMotActuel}
-        handleGuess={handleGuess}
+        gererDeviner={gererDeviner}
       />
-      <WordDisplay mot={mot} mot_a_deviner={MOT_A_DEVINER} />
+      <AffichageMot mots={mots} mot_a_deviner={MOT_A_DEVINER} />
     </div>
   );
 }
