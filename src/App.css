@@ -40,3 +40,13 @@ span {
   background-color: grey;
   color: white;
 }
+
+.message {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.essais-restants {
+  margin-top: 10px;
+  font-size: 1em;
+}
