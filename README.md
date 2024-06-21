@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Tusmo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue dans le dépôt GitHub de **Tusmo** !
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+**Tusmo** est une version open-source de Tusmo (jeu similaire à Sutom), un jeu de lettres où le but est de deviner un mot en un nombre limité de tentatives. Ce projet a été développé pour offrir une version accessible et modifiable du jeu, permettant aux développeurs d'explorer, d'améliorer et de personnaliser le jeu selon leurs besoins.
 
-### `npm start`
+## Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Interface utilisateur intuitive et responsive
+- Plusieurs niveaux de difficulté
+- Mots générés aléatoirement
+- Système de feedback visuel pour indiquer les lettres correctes et leur position
+- Historique des parties
+- Option de personnalisation des règles du jeu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prérequis
 
-### `npm test`
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- [npm](https://www.npmjs.com/) (version 6 ou supérieure)
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clonez le dépôt sur votre machine locale :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/TimotheeRiou/tusmo.git
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Accédez au répertoire du projet :
 
-### `npm run eject`
+    ```bash
+    cd tusmo
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Installez les dépendances nécessaires :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Utilisation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Pour démarrer le serveur de développement, exécutez :
 
-## Learn More
+    ```bash
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Le jeu sera alors accessible sur `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tests
 
-### Code Splitting
+Pour lancer les tests avec Cypress, suivez les étapes suivantes :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Assurez-vous que le serveur de développement est en cours d'exécution :
 
-### Analyzing the Bundle Size
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Ouvrez une nouvelle fenêtre de terminal et accédez au répertoire du projet :
 
-### Making a Progressive Web App
+    ```bash
+    cd tusmo
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Lancez Cypress en mode interactif :
 
-### Advanced Configuration
+    ```bash
+    npx cypress open
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   Cela ouvrira l'interface utilisateur de Cypress où vous pourrez choisir et exécuter les tests.
 
-### Deployment
+4. Pour lancer les tests en mode headless (sans interface graphique), exécutez :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    ```bash
+    npx cypress run
+    ```
 
-### `npm run build` fails to minify
+## Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Les contributions sont les bienvenues ! Si vous souhaitez contribuer au projet, veuillez suivre ces étapes :
+
+1. Forkez le dépôt.
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`).
+3. Commitez vos modifications (`git commit -m 'Add some amazing feature'`).
+4. Poussez votre branche (`git push origin feature/AmazingFeature`).
+5. Ouvrez une Pull Request.
+
+Veuillez vous assurer que votre code respecte les normes de codage et qu'il est correctement documenté.
+
+## License
+
+Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.
+
+## Remerciements
+
+Un grand merci à tous les contributeurs de ce projet. Votre soutien et vos contributions sont grandement appréciés.
+
+---
+
+**Auteur : Timothée Riou & Halil-Can Caliskan**
+
+Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue ou à contacter l'auteur directement.
